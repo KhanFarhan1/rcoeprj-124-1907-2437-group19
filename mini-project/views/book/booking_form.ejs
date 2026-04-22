@@ -1,0 +1,233 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+  <section class="ride_detail">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <br />
+        <hr />
+        <div class="row">
+          <h3 style="text-align: center">Ride Detail:</h3>
+          <!-- Pickup Location -->
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Pickup Location:</label>
+            <input
+              type="text"
+              value="<%= ride_data.pickup_location %>"
+              name="pickup_location"
+              placeholder="eg.Mumbai"
+              class="form-control"
+              readonly
+              required
+            />
+            <div class="invalid-feedback">Pickup Location is required.</div>
+          </div>
+
+          <!-- Destination -->
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Destination:</label>
+            <input
+              type="text"
+              value="<%=ride_data.destination%>"
+              name="destination"
+              placeholder="eg.Bandra"
+              class="form-control"
+              readonly
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <!-- Departure Timing -->
+          <div class="col-md-6 mb-3">
+            <label for="departure_date_time" class="form-label">
+              Departure Date and Time :</label
+            >
+            <input
+              type="datetime-local"
+              name="departure_date_time"
+              class="form-control"
+              value="<%= ride_data.departure_date_time.toISOString().slice(0,16) %>"
+              readonly
+              required
+            />
+          </div>
+          <!-- Available Seat -->
+          <div class="col-md-6 mb-3">
+            <label for="seat" class="form-label">Available Seats:</label>
+            <input
+              type="number"
+              name="seat"
+              min="1"
+              max="6"
+              value="<%= ride_data.seat %>"
+              class="form-control"
+              readonly
+              required
+            />
+            <div class="invalid-feedback">Seat is required.</div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Price -->
+          <div class="col-md-6 mb-3">
+            <label for="price" class="form-label">Price per Seat (₹):</label>
+            <input
+              type="number"
+              name="price"
+              min="0"
+              placeholder="eg.999"
+              class="form-control"
+              value="<%= ride_data.price %>"
+              readonly
+              required
+            />
+            <div class="invalid-feedback">Price is required.</div>
+          </div>
+          <!-- Car Type -->
+          <div class="col-md-6 mb-3">
+            <label for="car_type" class="form-label">Car type:</label>
+            <input
+              type="text"
+              name="car_type"
+              class="form-control"
+              value="<%= ride_data.car_type %>"
+              readonly
+              required
+            />
+          </div>
+        </div>
+        <hr />
+      </div>
+    </div>
+  </section>
+  <section class="driver_detail">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <div class="row">
+          <h3 style="text-align: center">Driver Detail:</h3>
+          <!-- Name -->
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Name:</label>
+            <input
+              type="text"
+              value="<%= ride_data.driver.name %>"
+              class="form-control"
+              readonly
+              required
+            />
+          </div>
+
+          <!-- Username -->
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Username:</label>
+            <input
+              type="text"
+              value="<%=ride_data.driver.username%>"
+              class="form-control"
+              readonly
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <!-- Rating -->
+          <div class="col-md-6 mb-3">
+            <label class="form-label"> Rating:</label>
+            <input
+              type="number"
+              class="form-control"
+              value="<%= ride_data.driver.rating%>"
+              readonly
+              required
+            />
+          </div>
+          <!-- Total Number of Ride -->
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Email:</label>
+            <input
+              type="email"
+              value="<%= ride_data.driver.email %>"
+              class="form-control"
+              readonly
+              required
+            />
+          </div>
+        </div>
+        <hr />
+      </div>
+    </div>
+  </section>
+  <section class="Booking">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <form
+          method="POST"
+          action="/booking/<%= ride_data._id %>"
+          class="needs-validation"
+        >
+          <h3 style="text-align: center">Booking Detail:</h3>
+
+          <div class="row">
+            <!-- Seat Quantity -->
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Seat Quantity:</label>
+              <input
+                type="number"
+                id="seat_booked"
+                name="seat_booked"
+                min="1"
+                max="<%= ride_data.seat %>"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <!-- Total Cost -->
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Total Cost:</label>
+              <input
+                type="number"
+                id="total_cost"
+                name="total_cost"
+                class="form-control"
+                readonly
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Mode of Payment -->
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Mode of Payment:</label>
+              <select name="payment_mode" class="form-control" required>
+                <option value="">Select Payment Mode</option>
+                <option value="cash">Cash</option>
+                <option value="online">Online</option>
+              </select>
+            </div>
+          </div>
+
+          <hr />
+
+          <button
+            class="btn btn-success"
+            onclick="
+              return confirm('Are you sure you want to book this ride?');
+            "
+          >
+            Confirm Booking
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script>
+    const seat = document.getElementById("seat_booked");
+    const total = document.getElementById("total_cost");
+    const price = <%=ride_data.price%>;
+
+    seat.addEventListener("input", function () {
+      total.value = seat.value * price;
+    });
+  </script>
+</body>

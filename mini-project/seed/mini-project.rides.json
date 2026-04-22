@@ -1,0 +1,621 @@
+[{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cbf8"
+  },
+  "driver": {
+    "$oid": "69abf517c909f807122e4f61"
+  },
+  "pickup_location": "Delhi",
+  "destination": "Agra",
+  "departure_date_time": {
+    "$date": "2026-08-11T14:30:00.000Z"
+  },
+  "seat": 8,
+  "price": 500,
+  "car_type": "ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-04T11:14:45.439Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cbf9"
+  },
+  "driver": {
+    "$oid": "69b0335d1f514ac36927366f"
+  },
+  "pickup_location": "Delhi",
+  "destination": "Jaipur",
+  "departure_date_time": {
+    "$date": "2026-04-13T01:15:00.000Z"
+  },
+  "seat": 4,
+  "price": 600,
+  "car_type": "non-ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cbfa"
+  },
+  "driver": {
+    "$oid": "69a899cb54f26c9ed50eb1c1"
+  },
+  "pickup_location": "Bangalore",
+  "destination": "Mysore",
+  "departure_date_time": {
+    "$date": "2026-04-14T04:45:00.000Z"
+  },
+  "seat": 2,
+  "price": 300,
+  "car_type": "ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cbfb"
+  },
+  "driver": {
+    "$oid": "69a9f786433c4b43b97abbd6"
+  },
+  "pickup_location": "Bangalore",
+  "destination": "Chennai",
+  "departure_date_time": {
+    "$date": "2026-04-15T00:00:00.000Z"
+  },
+  "seat": 3,
+  "price": 700,
+  "car_type": "ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-27T07:02:57.102Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cbfc"
+  },
+  "driver": {
+    "$oid": "69abf517c909f807122e4f61"
+  },
+  "pickup_location": "Hyderabad",
+  "destination": "Vijayawada",
+  "departure_date_time": {
+    "$date": "2026-04-16T03:15:00.000Z"
+  },
+  "seat": 3,
+  "price": 450,
+  "car_type": "ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cbfd"
+  },
+  "driver": {
+    "$oid": "69b0335d1f514ac36927366f"
+  },
+  "pickup_location": "Hyderabad",
+  "destination": "Warangal",
+  "departure_date_time": {
+    "$date": "2026-04-17T03:50:00.000Z"
+  },
+  "seat": 4,
+  "price": 300,
+  "car_type": "non-ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cbfe"
+  },
+  "driver": {
+    "$oid": "69a899cb54f26c9ed50eb1c1"
+  },
+  "pickup_location": "Chennai",
+  "destination": "Coimbatore",
+  "departure_date_time": {
+    "$date": "2026-04-18T01:00:00.000Z"
+  },
+  "seat": 4,
+  "price": 550,
+  "car_type": "ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cbff"
+  },
+  "driver": {
+    "$oid": "69a9f786433c4b43b97abbd6"
+  },
+  "pickup_location": "Chennai",
+  "destination": "Madurai",
+  "departure_date_time": {
+    "$date": "2026-04-19T01:40:00.000Z"
+  },
+  "seat": 3,
+  "price": 600,
+  "car_type": "non-ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cc00"
+  },
+  "driver": {
+    "$oid": "69abf517c909f807122e4f61"
+  },
+  "pickup_location": "Kolkata",
+  "destination": "Durgapur",
+  "departure_date_time": {
+    "$date": "2026-04-20T03:30:00.000Z"
+  },
+  "seat": 3,
+  "price": 250,
+  "car_type": "ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cc01"
+  },
+  "driver": {
+    "$oid": "69b0335d1f514ac36927366f"
+  },
+  "pickup_location": "Kolkata",
+  "destination": "Siliguri",
+  "departure_date_time": {
+    "$date": "2026-04-21T00:10:00.000Z"
+  },
+  "seat": 4,
+  "price": 750,
+  "car_type": "ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cc02"
+  },
+  "driver": {
+    "$oid": "69a899cb54f26c9ed50eb1c1"
+  },
+  "pickup_location": "Ahmedabad",
+  "destination": "Surat",
+  "departure_date_time": {
+    "$date": "2026-04-22T02:45:00.000Z"
+  },
+  "seat": 3,
+  "price": 300,
+  "car_type": "non-ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cc03"
+  },
+  "driver": {
+    "$oid": "69a9f786433c4b43b97abbd6"
+  },
+  "pickup_location": "Ahmedabad",
+  "destination": "Vadodara",
+  "departure_date_time": {
+    "$date": "2026-04-23T03:30:00.000Z"
+  },
+  "seat": 4,
+  "price": 250,
+  "car_type": "ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cc04"
+  },
+  "driver": {
+    "$oid": "69abf517c909f807122e4f61"
+  },
+  "pickup_location": "Lucknow",
+  "destination": "Kanpur",
+  "departure_date_time": {
+    "$date": "2026-04-24T02:00:00.000Z"
+  },
+  "seat": 3,
+  "price": 200,
+  "car_type": "ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cc05"
+  },
+  "driver": {
+    "$oid": "69b0335d1f514ac36927366f"
+  },
+  "pickup_location": "Lucknow",
+  "destination": "Varanasi",
+  "departure_date_time": {
+    "$date": "2026-04-25T00:30:00.000Z"
+  },
+  "seat": 4,
+  "price": 450,
+  "car_type": "non-ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cc06"
+  },
+  "driver": {
+    "$oid": "69a899cb54f26c9ed50eb1c1"
+  },
+  "pickup_location": "Pune",
+  "destination": "Goa",
+  "departure_date_time": {
+    "$date": "2026-04-26T00:00:00.000Z"
+  },
+  "seat": 3,
+  "price": 900,
+  "car_type": "ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cc07"
+  },
+  "driver": {
+    "$oid": "69a9f786433c4b43b97abbd6"
+  },
+  "pickup_location": "Nagpur",
+  "destination": "Bhopal",
+  "departure_date_time": {
+    "$date": "2026-04-27T02:40:00.000Z"
+  },
+  "seat": 4,
+  "price": 500,
+  "car_type": "non-ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cc08"
+  },
+  "driver": {
+    "$oid": "69abf517c909f807122e4f61"
+  },
+  "pickup_location": "Patna",
+  "destination": "Ranchi",
+  "departure_date_time": {
+    "$date": "2026-04-28T01:50:00.000Z"
+  },
+  "seat": 3,
+  "price": 350,
+  "car_type": "ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b036bcbd766b09d9d0cc09"
+  },
+  "driver": {
+    "$oid": "69b0335d1f514ac36927366f"
+  },
+  "pickup_location": "Indore",
+  "destination": "Ujjain",
+  "departure_date_time": {
+    "$date": "2026-04-29T04:10:00.000Z"
+  },
+  "seat": 4,
+  "price": 200,
+  "car_type": "non-ac",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:20:28.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b039ac93bb8e0c2605d4a4"
+  },
+  "driver": {
+    "$oid": "69b0335d1f514ac36927366f"
+  },
+  "pickup_location": "INDIA",
+  "destination": "NEPAL",
+  "departure_date_time": {
+    "$date": "2026-04-08T15:32:00.000Z"
+  },
+  "seat": 5,
+  "price": 999,
+  "car_type": "non-ac",
+  "createdAt": {
+    "$date": "2026-03-10T15:33:00.071Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-10T15:41:42.167Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b47396e997b1ad52021019"
+  },
+  "driver": {
+    "$oid": "69abf517c909f807122e4f61"
+  },
+  "pickup_location": "INDIA",
+  "destination": "NEPAL",
+  "departure_date_time": {
+    "$date": "2026-03-13T20:30:00.000Z"
+  },
+  "seat": 5,
+  "price": 999,
+  "car_type": "ac",
+  "createdAt": {
+    "$date": "2026-03-13T20:29:10.352Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-18T05:04:28.599Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ba3126dc07785d264fa82c"
+  },
+  "driver": {
+    "$oid": "69abf517c909f807122e4f61"
+  },
+  "pickup_location": "Mumbai",
+  "destination": "Thane",
+  "departure_date_time": {
+    "$date": "2026-03-18T05:01:00.000Z"
+  },
+  "seat": 2,
+  "price": 786,
+  "car_type": "ac",
+  "createdAt": {
+    "$date": "2026-03-18T04:59:18.356Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-18T05:04:47.132Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ba32a9dc07785d264fa884"
+  },
+  "driver": {
+    "$oid": "69abf517c909f807122e4f61"
+  },
+  "pickup_location": "Mumbai",
+  "destination": "Thane",
+  "departure_date_time": {
+    "$date": "2026-03-18T05:07:00.000Z"
+  },
+  "seat": 2,
+  "price": 786,
+  "car_type": "ac",
+  "createdAt": {
+    "$date": "2026-03-18T05:05:45.431Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-18T05:12:35.428Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ba3681dc07785d264fa90e"
+  },
+  "driver": {
+    "$oid": "69abf517c909f807122e4f61"
+  },
+  "pickup_location": "Mumbai",
+  "destination": "Thane",
+  "departure_date_time": {
+    "$date": "2026-03-18T05:23:00.000Z"
+  },
+  "seat": 1,
+  "price": 786,
+  "car_type": "ac",
+  "createdAt": {
+    "$date": "2026-03-18T05:22:09.750Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-18T05:23:17.339Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69bb1a4458bfdc03ae812113"
+  },
+  "driver": {
+    "$oid": "69abf517c909f807122e4f61"
+  },
+  "pickup_location": "Mumbai",
+  "destination": "Thane",
+  "departure_date_time": {
+    "$date": "2026-03-18T21:35:00.000Z"
+  },
+  "seat": 1,
+  "price": 786,
+  "car_type": "ac",
+  "createdAt": {
+    "$date": "2026-03-18T21:33:56.098Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-18T21:34:43.884Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69c451be3a499edb673c9931"
+  },
+  "driver": {
+    "$oid": "69abf517c909f807122e4f61"
+  },
+  "pickup_location": "Mumbai",
+  "destination": "Thane",
+  "departure_date_time": {
+    "$date": "2026-04-23T09:20:00.000Z"
+  },
+  "seat": 2,
+  "price": 999,
+  "car_type": "ac",
+  "createdAt": {
+    "$date": "2026-03-25T21:21:02.322Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-25T21:21:02.322Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69c62be5ae29bf019c49fbf2"
+  },
+  "driver": {
+    "$oid": "69abf517c909f807122e4f61"
+  },
+  "pickup_location": "Mumbra",
+  "destination": "Thane",
+  "departure_date_time": {
+    "$date": "2026-03-27T03:33:00.000Z"
+  },
+  "seat": 5,
+  "price": 260,
+  "car_type": "ac",
+  "createdAt": {
+    "$date": "2026-03-27T07:04:05.001Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-27T07:04:24.349Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69c6319bae29bf019c49fc2a"
+  },
+  "driver": {
+    "$oid": "69abf517c909f807122e4f61"
+  },
+  "pickup_location": "Thane",
+  "destination": "Bandra",
+  "departure_date_time": {
+    "$date": "2026-03-27T03:57:00.000Z"
+  },
+  "seat": 4,
+  "price": 460,
+  "car_type": "ac",
+  "createdAt": {
+    "$date": "2026-03-27T07:28:27.573Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-27T07:28:59.978Z"
+  },
+  "__v": 0
+}]

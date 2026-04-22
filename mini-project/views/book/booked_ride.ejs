@@ -1,0 +1,206 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+  <% let hasActive = false; %>
+  <% for (const ride of booked_ride) {%>
+    <% if(ride.ride_detail && ride.status === "active"){%>
+      <% hasActive = true; %>
+<section class="ride_detail">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <br />
+        <hr />
+        <div class="row">
+          <h3 style="text-align: center">Ride Detail:</h3>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Pickup Location:</label>
+            <input
+              type="text"
+              value="<%= ride.ride_detail.pickup_location %>"
+              class="form-control"
+              readonly
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Destination:</label>
+            <input
+              type="text"
+              value="<%= ride.ride_detail.destination %>"
+              class="form-control"
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Departure Date and Time:</label>
+            <input
+              type="datetime-local"
+              value="<%= ride.ride_detail.departure_date_time.toISOString().slice(0,16) %>"
+              class="form-control"
+              readonly
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Car Type:</label>
+            <input
+              type="text"
+              value="<%= ride.ride_detail.car_type %>"
+              class="form-control"
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Price per Seat:</label>
+            <input
+              type="number"
+              value="<%= ride.ride_detail.price %>"
+              class="form-control"
+              readonly
+            />
+          </div>
+        </div>
+
+        <hr />
+      </div>
+    </div>
+  </section>
+
+  <section class="driver_detail">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <div class="row">
+          <h3 style="text-align: center">Driver Detail:</h3>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Driver Name:</label>
+            <input
+              type="text"
+              value="<%= ride.ride_detail.driver.name %>"
+              class="form-control"
+              readonly
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Driver Username:</label>
+            <input
+              type="text"
+              value="<%= ride.ride_detail.driver.username %>"
+              class="form-control"
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Driver Email:</label>
+            <input
+              type="email"
+              value="<%= ride.ride_detail.driver.email %>"
+              class="form-control"
+              readonly
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Driver Rating:</label>
+            <input
+              type="number"
+              value="<%= ride.ride_detail.driver.rating %>"
+              class="form-control"
+              readonly
+            />
+          </div>
+        </div>
+
+        <hr />
+      </div>
+    </div>
+  </section>
+
+  <section class="booking_detail">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h3 style="text-align: center">Booking Detail:</h3>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Seats Booked:</label>
+            <input
+              type="number"
+              value="<%= ride.seat_booked %>"
+              class="form-control"
+              readonly
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Total Cost:</label>
+            <input
+              type="number"
+              value="<%= ride.total_cost %>"
+              class="form-control"
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Payment Mode:</label>
+            <input
+              type="text"
+              value="<%= ride.payment_mode %>"
+              class="form-control"
+              readonly
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Status:</label>
+            <input
+              type="text"
+              value="<%= ride.status %>"
+              class="form-control"
+              readonly
+            />
+          </div>
+        </div>
+
+        <hr />
+        <form
+          action="/booking/cancel/<%=ride._id %>?_method=DELETE"
+          method="POST"
+          style="display: inline"
+          onsubmit="return confirm('Are you want to cancel the booking?');"
+        >
+          <button class="btn btn-danger">Cancel</button>
+        </form>
+        <!-- <a
+            href="/booking/edit/<%= booked_ride._id %>"
+            class="btn btn-primary"
+          >
+            Update Booking
+          </a> -->
+      </div>
+    </div>
+  </section>
+  <% } %>
+ <% } %>
+ <% if (!hasActive) { %>
+  <div class="text-center mt-5">
+    <h3>No Active Bookings</h3>
+  </div>
+<% } %>
+  
+  
+</body>
+

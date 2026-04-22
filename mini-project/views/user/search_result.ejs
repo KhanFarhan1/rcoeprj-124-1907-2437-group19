@@ -1,0 +1,78 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+<div class="container mt-5">
+  <div class="card shadow-lg p-4 rounded-4">
+    <form action="/search" method="GET">
+      <div class="row g-3 align-items-end">
+        <div class="col-md-5">
+          <label class="form-label">Pickup Location</label>
+          <input type="text" name="from" value="<%= from %>" 
+            class="form-control rounded-3" placeholder="Enter pickup location"/>
+        </div>
+        <div class="col-md-5">
+          <label class="form-label">Destination</label>
+          <input type="text" name="to" value="<%= to %>" 
+            class="form-control rounded-3" placeholder="Enter destination"/>
+        </div>
+        <div class="col-md-2 d-grid">
+          <button class="btn btn-dark rounded-3">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<hr />
+
+<div class="container">
+
+  <!-- EXACT MATCHES -->
+  <h4 class="mb-3">Exact Results:</h4>
+  <% if (exactMatch.length > 0) { %>
+    <div class="row">
+      <% for (let ride_data of exactMatch) { %>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 p-3">
+            <h5 class="border-bottom pb-2">
+              <b>Driver:</b> <%= ride_data.driver.username %>
+            </h5>
+            <p><b>From:</b> <%= ride_data.pickup_location %></p>
+            <p><b>To:</b> <%= ride_data.destination %></p>
+            <p><b>Date:</b> <%= new Date(ride_data.departure_date_time).toLocaleString() %></p>
+            <p><b>Seats:</b> <%= ride_data.seat %></p>
+            <p><b>Car:</b> <%= ride_data.car_type %></p>
+            <p><b>Price:</b> ₹<%= ride_data.price %></p>
+            <a href="/booking/<%= ride_data._id %>" class="btn btn-dark mt-auto">Book Now</a>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  <% } else { %>
+    <%# ✅ Show this instead of blank page %>
+    <div class="alert alert-warning">No exact rides found for this route.</div>
+  <% } %>
+
+  <!-- SUGGESTIONS -->
+  <% if (suggestions.length > 0) { %>
+    <h4 class="mt-4 mb-3">Suggestions:</h4>
+    <div class="row">
+      <% for (let ride_data of suggestions) { %>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100 p-3 border-secondary">
+            <h5 class="border-bottom pb-2">
+              <b>Driver:</b> <%= ride_data.driver.username %>
+            </h5>
+            <p><b>From:</b> <%= ride_data.pickup_location %></p>
+            <p><b>To:</b> <%= ride_data.destination %></p>
+            <p><b>Date:</b> <%= new Date(ride_data.departure_date_time).toLocaleString() %></p>
+            <p><b>Seats:</b> <%= ride_data.seat %></p>
+            <p><b>Car:</b> <%= ride_data.car_type %></p>
+            <p><b>Price:</b> ₹<%= ride_data.price %></p>
+            <a href="/booking/<%= ride_data._id %>" class="btn btn-dark mt-auto">Book Now</a>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  <% } %>
+
+</div>

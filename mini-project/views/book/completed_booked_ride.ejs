@@ -1,0 +1,79 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+  <style>
+    .ride-card {
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      padding: 15px;
+      background: #fff;
+      margin-bottom: 20px;
+      transition: 0.2s ease;
+    }
+
+    .ride-card:hover {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #000;
+    }
+
+    .small-text {
+      font-size: 13px;
+      color: #333;
+      margin: 2px 0;
+    }
+
+    .badge-complete {
+      font-size: 11px;
+      background: #000;
+      color: #fff;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+  </style>
+
+  <div class="container mt-4">
+    <% let hasCompleted = false; %>
+    <div class="row">
+
+      <% for (const ride of booked_ride) { %>
+        <% if (ride.ride_detail && ride.status === "completed") { %>
+          <% hasCompleted = true; %>
+
+          <div class="col-md-6">
+            <div class="ride-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="card-title">Completed Ride</div>
+                <span class="badge-complete">Completed</span>
+              </div>
+
+              <div class="card-title mb-1"><u>Ride Details</u></div>
+              <p class="small-text"><strong><%= ride.ride_detail.pickup_location %></strong> to <strong><%= ride.ride_detail.destination %></strong></p>
+              <p class="small-text"><%= ride.ride_detail.departure_date_time.toDateString() %></p>
+              <p class="small-text"><%= ride.ride_detail.car_type %></p>
+
+              <hr />
+
+              <div class="card-title mt-2 mb-1"><u>Driver & Booking</u></div>
+              <p class="small-text">Driver: <%= ride.ride_detail.driver.name %></p>
+              <p class="small-text">Seats: <%= ride.seat_booked %></p>
+              <p class="small-text">Amount: ₹<%= ride.total_cost %></p>
+              <div><form action="/review/<%- ride.ride_detail._id %>" method="get"><button class="btn btn-link col-md-4 mb-3 small-text">Write a review!!!</button></form></div>
+            </div>
+          </div>
+
+        <% } %>
+      <% } %>
+
+    </div>
+
+    <% if (!hasCompleted) { %>
+      <div class="text-center mt-5">
+        <h3>No completed rides yet</h3>
+      </div>
+    <% } %>
+  </div>
+</body>
