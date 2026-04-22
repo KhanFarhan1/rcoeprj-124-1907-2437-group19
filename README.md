@@ -1,6 +1,3 @@
-Here is everything in plain text format (no symbols, no markdown):
-
-
 ---
 
 rcoeprj-124-1907-2437-group19
@@ -53,5 +50,3 @@ https://kaggle.com/dataset2
 
 
 ---
-
-If you want, I can make it even shorter for submission or format it for Word.
